@@ -14,11 +14,14 @@ import {
 
 export default function App() {
   let x = 1;
-  console.log("Apps is exectued");
+  const handleTextPress = () => console.log("Apps is exectued");
 
   return (
     <View style={styles.container}>
-      <Text>Hello</Text>
+      <Text onPress={handleTextPress} numberOfLines={1}>
+        so close no matter how far, couldn't be much more from the heart.
+        Forever trust in who we are and nothing else matters.
+      </Text>
     </View>
   );
 }
