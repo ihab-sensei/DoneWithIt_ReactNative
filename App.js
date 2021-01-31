@@ -2,10 +2,9 @@ import React from "react";
 import {
   StyleSheet,
   Text,
-  TouchableNativeFeedback,
+  TouchableHighlight,
   View,
   Image,
-  SafeAreaView,
   Button,
   Alert,
   Platform,
@@ -22,14 +21,16 @@ export default function App() {
         so close no matter how far, couldn't be much more from the heart.
         Forever trust in who we are and nothing else matters.
       </Text>
-      <Image
-        fadeDuration={1000}
-        source={{
-          width: 200,
-          height: 300,
-          uri: "https://picsum.photos/200/300",
-        }}
-      />
+      <TouchableHighlight onPress={handleTextPress}>
+        <Image
+          fadeDuration={1000}
+          source={{
+            width: 200,
+            height: 300,
+            uri: "https://picsum.photos/200/300",
+          }}
+        />
+      </TouchableHighlight>
     </View>
   );
 }
