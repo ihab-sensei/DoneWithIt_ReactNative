@@ -24,7 +24,7 @@ export default function App() {
             },
             {
               text: "no",
-              onPress: () => console.log("No button was pressed"),
+              onPress: () => console.log(StatusBar.currentHeight),
             },
           ]);
         }}
@@ -36,9 +36,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
     backgroundColor: "#fff",
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeigt : 0,
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
 });
