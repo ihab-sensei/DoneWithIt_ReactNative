@@ -1,34 +1,23 @@
 import React from "react";
 import {
   StyleSheet,
-  Text,
-  TouchableHighlight,
   View,
-  Image,
-  Button,
-  Alert,
   Platform,
   StatusBar,
+  Dimensions,
 } from "react-native";
 
 export default function App() {
+  console.log(Dimensions.get("screen"));
   return (
     <View style={styles.container}>
-      <Button
-        title={"Click me!"}
-        onPress={() => {
-          Alert.alert("customized alert", "Alert message", [
-            {
-              text: "yes",
-              onPress: () => console.log("Yes button was pressed"),
-            },
-            {
-              text: "no",
-              onPress: () => console.log(StatusBar.currentHeight),
-            },
-          ]);
+      <View
+        style={{
+          backgroundColor: "dodgerblue",
+          width: "50%",
+          height: 70,
         }}
-      />
+      ></View>
     </View>
   );
 }
