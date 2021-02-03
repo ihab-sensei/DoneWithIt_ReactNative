@@ -6,16 +6,20 @@ import {
   StatusBar,
   Dimensions,
 } from "react-native";
+import {
+  useDeviceOrientation,
+  useDimensions,
+} from "@react-native-community/hooks";
 
 export default function App() {
-  console.log(Dimensions.get("screen"));
+  const { landscape } = useDeviceOrientation();
   return (
     <View style={styles.container}>
       <View
         style={{
           backgroundColor: "dodgerblue",
-          width: "50%",
-          height: 70,
+          width: "100%",
+          height: landscape ? "100%" : "30%",
         }}
       ></View>
     </View>
