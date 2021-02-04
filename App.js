@@ -5,6 +5,7 @@ import {
   Platform,
   StatusBar,
   Dimensions,
+  Image,
 } from "react-native";
 import {
   useDeviceOrientation,
@@ -17,11 +18,36 @@ export default function App() {
     <View style={styles.container}>
       <View
         style={{
-          backgroundColor: "dodgerblue",
-          width: "100%",
-          height: landscape ? "100%" : "30%",
+          flex: 0.55,
+          flexDirection: "row",
+          justifyContent: "space-between",
         }}
-      ></View>
+      >
+        <View
+          style={{
+            width: 70,
+            height: 70,
+            backgroundColor: "tomato",
+            left: 20,
+          }}
+        />
+        <View
+          style={{
+            width: 70,
+            height: 70,
+            backgroundColor: "dodgerblue",
+            right: 20,
+          }}
+        />
+      </View>
+
+      <Image
+        style={{
+          width: "100%",
+          height: "60%",
+        }}
+        source={require("./assets/chair.jpg")}
+      />
     </View>
   );
 }
@@ -29,7 +55,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#000",
     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
 });
