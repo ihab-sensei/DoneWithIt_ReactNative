@@ -6,6 +6,7 @@ import {
   StatusBar,
   Dimensions,
   Image,
+  Text,
 } from "react-native";
 import {
   useDeviceOrientation,
@@ -13,41 +14,56 @@ import {
 } from "@react-native-community/hooks";
 
 export default function App() {
-  const { landscape } = useDeviceOrientation();
+  console.log(useDimensions());
   return (
     <View style={styles.container}>
+      <Image
+        style={{
+          width: "100%",
+          height: "80%",
+        }}
+        source={require("./assets/background.jpg")}
+      />
       <View
         style={{
-          flex: 0.55,
-          flexDirection: "row",
-          justifyContent: "space-between",
+          flex: 1,
+          justifyContent: "center",
+          position: "absolute",
+          top: "10%",
+          left: 146,
+        }}
+      >
+        <Image
+          source={require("./assets/logo-red.png")}
+          style={{
+            width: 100,
+            height: 100,
+          }}
+        />
+        <Text>Sell What You Don't Need</Text>
+      </View>
+      <View
+        style={{
+          flex: 1,
+          position: "absolute",
+          bottom: 0,
         }}
       >
         <View
           style={{
-            width: 70,
-            height: 70,
+            height: 84,
+            width: 392,
             backgroundColor: "tomato",
-            left: 20,
           }}
         />
         <View
           style={{
-            width: 70,
-            height: 70,
+            height: 84,
+            width: 392,
             backgroundColor: "dodgerblue",
-            right: 20,
           }}
         />
       </View>
-
-      <Image
-        style={{
-          width: "100%",
-          height: "60%",
-        }}
-        source={require("./assets/chair.jpg")}
-      />
     </View>
   );
 }
