@@ -1,5 +1,5 @@
 import React from "react";
-import { View } from "react-native";
+import { Text, View } from "react-native";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 
 export default function App() {
@@ -12,20 +12,22 @@ export default function App() {
         alignItems: "center",
       }}
     >
-      <View
+      <Text
         style={{
-          width: 100,
-          height: 100,
-          backgroundColor: "dodgerblue",
-          borderWidth: 10,
-          borderColor: "royalblue",
-          shadowColor: "grey",
-          shadowOffset: { height: 10, width: 10 },
-          shadowOpacity: 1,
-          shadowRadius: 10,
-          elevation: 20,
+          fontSize: 30,
+          fontFamily: "Roboto",
+          fontStyle: "italic",
+          fontWeight: "bold",
+          color: "tomato",
+          textTransform: "capitalize",
+          textDecorationLine: "underline",
+          lineHeight: 60,
+          textAlign: "center",
         }}
-      ></View>
+      >
+        I love react native! because you can have one code base for both ios and
+        android
+      </Text>
     </View>
   );
 }
