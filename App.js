@@ -1,6 +1,7 @@
 import React from "react";
-import { Text, View } from "react-native";
-import ViewImageScreen from "./app/screens/ViewImageScreen";
+import { View } from "react-native";
+
+import AppText from "./app/components/AppText";
 
 export default function App() {
   return (
@@ -12,22 +13,10 @@ export default function App() {
         alignItems: "center",
       }}
     >
-      <Text
-        style={{
-          fontSize: 30,
-          fontFamily: "Roboto",
-          fontStyle: "italic",
-          fontWeight: "bold",
-          color: "tomato",
-          textTransform: "capitalize",
-          textDecorationLine: "underline",
-          lineHeight: 60,
-          textAlign: "center",
-        }}
-      >
+      <AppText>
         I love react native! because you can have one code base for both ios and
         android
-      </Text>
+      </AppText>
     </View>
   );
 }
