@@ -1,7 +1,9 @@
 import React from "react";
 import { View } from "react-native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import AppText from "./app/components/AppText";
+import colors from "./app/config/colors";
 
 export default function App() {
   return (
@@ -13,10 +15,11 @@ export default function App() {
         alignItems: "center",
       }}
     >
-      <AppText>
-        I love react native! because you can have one code base for both ios and
-        android
-      </AppText>
+      <MaterialCommunityIcons
+        name="email"
+        size={200}
+        color={colors.secondary}
+      />
     </View>
   );
 }
