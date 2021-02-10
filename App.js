@@ -4,6 +4,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import AppText from "./app/components/AppText";
 import colors from "./app/config/colors";
+import AppButton from "./app/components/AppButton";
 
 export default function App() {
   return (
@@ -15,7 +16,7 @@ export default function App() {
         alignItems: "center",
       }}
     >
-      <AppText>I love react native!</AppText>
+      <AppButton title="login" onPress={() => console.log("Tapped")} />
     </View>
   );
 }
