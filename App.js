@@ -2,21 +2,23 @@ import React from "react";
 import { View } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-import AppText from "./app/components/AppText";
-import colors from "./app/config/colors";
-import AppButton from "./app/components/AppButton";
+import Card from "./app/components/Card";
 
 export default function App() {
   return (
     <View
       style={{
-        backgroundColor: "#fff",
         flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
+        backgroundColor: "#f8f4f4",
+        padding: 20,
+        paddingTop: 100,
       }}
     >
-      <AppButton title="login" onPress={() => console.log("Tapped")} />
+      <Card
+        title="Red jacket for sale"
+        subTitle="100$"
+        image={require("./app/assets/jacket.jpg")}
+      />
     </View>
   );
 }

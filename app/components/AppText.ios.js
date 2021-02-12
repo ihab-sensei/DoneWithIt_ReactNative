@@ -7,7 +7,7 @@ function AppText({ children }) {
 
 const styles = StyleSheet.create({
   text: {
-    fontSize: 10,
+    fontSize: 18,
     fontFamily: "Avenir",
   },
 });
