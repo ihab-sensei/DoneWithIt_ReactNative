@@ -24,7 +24,7 @@ function LoginScreen(props) {
         onSubmit={(values) => console.log(values)}
         validationSchema={validationSchema}
       >
-        {({ handleChange, handleSubmit, errors }) => (
+        {({ handleChange, handleSubmit, errors, touched, setFieldTouched }) => (
           <>
             <AppTextInput
               autoCapitalize="none"
@@ -34,8 +34,9 @@ function LoginScreen(props) {
               keyboardType="email-address"
               textContentType="emailAddress"
               onChangeText={handleChange("email")}
+              onBlur={() => setFieldTouched("email")}
             />
-            <AppErrorMessage error={errors.email} />
+            <AppErrorMessage error={errors.email} visible={touched.email} />
 
             <AppTextInput
               autoCapitalize="none"
@@ -45,8 +46,12 @@ function LoginScreen(props) {
               textContentType="password"
               secureTextEntry
               onChangeText={handleChange("password")}
+              onBlur={() => setFieldTouched("password")}
             />
-            <AppErrorMessage error={errors.password} />
+            <AppErrorMessage
+              error={errors.password}
+              visible={touched.password}
+            />
 
             <AppButton title="Login" onPress={handleSubmit} />
           </>
