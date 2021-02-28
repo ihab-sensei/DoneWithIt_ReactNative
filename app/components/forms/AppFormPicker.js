@@ -6,6 +6,7 @@ import AppErrorMessage from "./AppErrorMessage";
 
 function AppFormPicker({ items, name, placeholder }) {
   const { errors, setFieldValue, touched, values } = useFormikContext();
+
   return (
     <>
       <AppPicker
